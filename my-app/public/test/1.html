@@ -1,0 +1,19 @@
+<!doctype html>
+
+<script>
+
+    async function getUsers(names) {
+        let res = [];
+        let url = 'https://api.github.com/users/';
+        for (let i = 0; i <names.length ; i++) {
+            fetch(url+i).then(result=>result.text()).then(text=>alert(text));
+        }
+        return res;
+    }
+
+    let x = getUsers(['iliakan', 'remy', 'no.such.users']);
+
+    debugger;
+</script>
+
+</html>
